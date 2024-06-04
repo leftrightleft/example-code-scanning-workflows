@@ -1,4 +1,4 @@
-# example-code-scanning-workflows
+# Example Code Scanning Workflows
 
 Just a bunch of example workflow files for code scanning.  Take a look at .github/workflows.
 
