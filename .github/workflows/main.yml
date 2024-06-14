@@ -1,0 +1,29 @@
+
+name: "CodeQL"
+
+on:
+  workflow_dispatch:
+
+jobs:
+  analyze:
+    name: run
+    runs-on: 'ubuntu-latest'
+    permissions:
+      # required for all workflows
+      security-events: write
+
+      # required to fetch internal or private CodeQL packs
+      packages: read
+
+      # only required for workflows in private repositories
+      actions: read
+      contents: read
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    # Initializes the CodeQL tools for scanning.
+    - name: do stuff
+      shell: bash
+      run: |
+        codeql --version
