@@ -1,7 +1,7 @@
 # This example codeql configuration file is used to run only a single query from a community pack
 # 
 # To use this config file from the cli, run the following command:
-# codeql database create db --language=java --codescanning-config=./codeql.yml
+# codeql database create db --language=java --codescanning-config=./java-exclude-query.yml
 # 
 
 name: Java exclude hard-coded creds query
