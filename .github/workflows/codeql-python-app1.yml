@@ -1,7 +1,7 @@
 # This workflow triggers only when code is modified in the python/app1 directory. It then excludes scans from 
 # the python/app2 directory
 
-name: "CodeQL"
+name: "CodeQL - Python App 1"
 
 on:
   push:
@@ -93,4 +93,4 @@ jobs:
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@v3
       with:
-        category: "/language:${{matrix.language}}"
+        category: "/language:${{matrix.language}}/app1"
