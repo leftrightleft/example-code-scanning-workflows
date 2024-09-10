@@ -6,12 +6,12 @@ name: "CodeQL - Python App 1"
 on:
   push:
     branches: [ "main" ]
-    # Only scan when go code is modified
+    # Only scan when python files are modified in the app1 directory
     paths:
       - '*/app1/**.py'
   pull_request:
     branches: [ "main" ]
-    # Only scan when go code is modified
+    # Only scan when python files are modified in the app1 directory
     paths:
       - '*/app1/**.py'
   schedule:
@@ -63,7 +63,7 @@ jobs:
       with:
         languages: ${{ matrix.language }}
         build-mode: ${{ matrix.build-mode }}
-        # Passing a config that excludes specific test directories
+        # Passing a config that excludes the app2 directory
         config: |
           paths-ignore: 
             - '**/python-code/app2/**'
@@ -93,4 +93,5 @@ jobs:
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@v3
       with:
+       # VERY IMPORTANT! Make sure to use a category label that is specific for this workflow
         category: "/language:${{matrix.language}}/app:app1"
