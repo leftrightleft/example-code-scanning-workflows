@@ -8,12 +8,12 @@ on:
     branches: [ "main" ]
     # Only scan when go code is modified
     paths:
-      - '*/python/app1/**.py'
+      - '*/app1/**.py'
   pull_request:
     branches: [ "main" ]
     # Only scan when go code is modified
     paths:
-      - '*/python/app1/**.py'
+      - '*/app1/**.py'
   schedule:
     - cron: '26 15 * * 5'
 
