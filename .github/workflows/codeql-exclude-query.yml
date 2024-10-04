@@ -67,9 +67,9 @@ jobs:
         languages: ${{ matrix.language }}
         build-mode: ${{ matrix.build-mode }}
         config: |
-          disable-default-queries: false
-          # queries:
-          #   - uses: code-scanning
+          # disable-default-queries: false
+          queries:
+            - uses: default
           query-filters:
             - exclude:
               id: py/clear-text-logging-sensitive-data
