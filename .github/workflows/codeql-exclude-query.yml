@@ -66,6 +66,9 @@ jobs:
       with:
         languages: ${{ matrix.language }}
         build-mode: ${{ matrix.build-mode }}
+        # 
+        # Here is where we will exclude a specific query.  Pay close attention to spacing as this section is passed as a string directly to codeql
+        #
         config: |
           query-filters:
           - exclude:
