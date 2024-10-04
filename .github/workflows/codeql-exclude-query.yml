@@ -9,7 +9,7 @@
 # the `language` matrix defined below to confirm you have the correct set of
 # supported CodeQL languages.
 #
-name: "CodeQL"
+name: "CodeQL - exclude query"
 
 on:
   push:
@@ -67,9 +67,9 @@ jobs:
         languages: ${{ matrix.language }}
         build-mode: ${{ matrix.build-mode }}
         config: |
-          disable-default-queries: true
+          disable-default-queries: false
           queries:
-            - uses: security-extended
+            - uses: security
           query-filters:
             - exclude:
               id: py/clear-text-logging-sensitive-data
