@@ -68,8 +68,8 @@ jobs:
         build-mode: ${{ matrix.build-mode }}
         config: |
           disable-default-queries: false
-          queries:
-            - uses: code-scanning
+          # queries:
+          #   - uses: code-scanning
           query-filters:
             - exclude:
               id: py/clear-text-logging-sensitive-data
