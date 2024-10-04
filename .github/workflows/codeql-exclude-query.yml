@@ -69,7 +69,7 @@ jobs:
         config: |
           disable-default-queries: false
           queries:
-            - uses: security
+            - uses: code-scanning
           query-filters:
             - exclude:
               id: py/clear-text-logging-sensitive-data
